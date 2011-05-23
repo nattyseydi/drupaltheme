@@ -1,0 +1,525 @@
+@charset "UTF-8";
+/* CSS Document */
+/*
+Theme Name: Gowhunk
+Theme URI: http://dsgndepot.com/
+Description: Custom Theme
+Author: Abban Dunne
+Author URI: http://dsgndepot.com/
+Tags: custom, fixed width, 960.gs
+*/
+
+/*swatch*/
+/*
+Orange: b96411
+
+
+*/
+
+::selection{
+	background:#E6E2AF;
+}
+::-moz-selection{
+	background:#E6E2AF;
+}
+/*lists*/
+nav{
+	font-family: 'LeagueGothicRegular', "Helvetica Neue", Arial, Helvetica, sans-serif;
+	}
+	nav ul#menu-nav{
+		margin-bottom: 0;
+		float: left;
+		}
+		nav ul#menu-nav a:hover,
+		nav ul#menu-nav a:focus,
+		footer#worlds_end a:hover,
+		footer#worlds_end a:focus,
+		nav ul#menu-nav li.current-menu-item > a,
+		nav ul#menu-nav li.current-menu-ancestor > a,
+		nav ul#menu-nav li.current-menu-parent > a,
+		nav ul#menu-nav li.current_page_parent > a,
+		nav ul#menu-nav li.current_page_ancestor > a{
+			color:#fff;
+		}
+		nav ul#menu-nav > li{
+			display: inline;
+			position: relative;
+			text-transform: uppercase;
+			}
+			nav ul#menu-nav > li > a{
+				border-left: 1px solid #3a3a3a;
+				font-weight: normal;
+				display: inline-block;
+				padding: 50px 40px 10px 20px;
+				font-size: 1.8em;
+			}
+			nav #menu-nav > li:last-child a{
+				margin-right: 0;
+			}
+		nav ul#menu-nav > li ul{
+			display: none;
+			position: absolute;
+			z-index: 9999;
+			left:0;
+			margin:0;
+			list-style-type: none;
+			min-width:150px;
+			border: 1px solid #3a3a3a;
+			border-top:0px;
+			}
+			nav ul#menu-nav > li ul > li > a{
+				display: block;
+				padding:10px 0 10px 10px;
+				background: #292929;
+				border-bottom: 1px solid #3a3a3a;
+				font-size: 1.2em;
+			}
+			nav ul#menu-nav > li ul > li:last-child > a{
+				border-bottom: 0px;	
+			}
+		nav ul#menu-nav > li:hover ul, nav ul#menu-nav > li:focus ul{
+			display: block;
+		}
+
+footer#worlds_end ul{
+	list-style-type: none;
+	margin-right:0;
+	padding-left:0;
+	}
+	footer#worlds_end li{
+		display: inline;
+		padding-right: 20px;
+	}
+
+/*form elements*/
+
+header#banner form{
+	float:right;
+	width:226px;
+	padding:0 0 0 12px;
+}
+
+header#banner input[type="text"], #sidebar input[type="text"]{
+	padding:5px;
+	width:182px;
+	border: 1px solid #3a3a3a;
+	font-size: 1.1em;
+	margin: 2.5em 0 0 0;
+	display: inline;
+}
+#sidebar input[type="text"]{
+	width:158px;
+	margin-top: 0px;
+}
+header#banner input[type="submit"], #sidebar input[type="submit"]{
+	border:1px solid #3a3a3a;
+	background: #3a3a3a;
+	color: #fff;
+	height:29px;
+	width:29px;
+	font-size: 1.1em;
+	margin: 2.5em 0 0 0;
+	display: inline;
+	font-weight: bold;
+}
+#sidebar input[type="submit"]{
+	margin-top: 0px;
+}
+
+/*layout*/
+body{background: #fff;}
+
+header#banner{
+	margin-bottom: 3em;
+	background: #292929;
+	width: 100%;
+	color:#fff;
+}
+header#banner h1{
+	color:#fff;
+}
+#blurb{
+	min-height: 50px;
+	margin-bottom: 1.5em;
+	}
+	#blurb p{
+		margin-bottom: 0;
+		text-transform: none;
+		color:#666;
+		font-size: 1.5em;
+	}
+#logo{
+	margin-bottom: -60px;
+}
+
+#content{
+	}
+	#content > section, #content aside#photos, #content > article{
+		margin-right: 0;
+		margin-left: 0;
+		padding-right: 12px;
+		padding-left: 12px;
+		background: url(images/borderv.png) top right repeat-y;
+		}
+		#content > section > h3, #content aside > h3{
+			border-bottom: 1px solid #292929;
+		}
+		#posts > article, #photos > article{
+			padding-bottom: 1.5em;
+			margin-bottom: 1.5em;
+			background: url(images/borderh.png) bottom left repeat-x;
+		}
+		#photos > article a{
+			display: block;
+			position: relative;
+			-webkit-transition: all .2s ease-in-out;
+		    -moz-transition: all .2s ease-in-out;
+		    -o-transition: all .2s ease-in-out;
+		}
+		#photos > article > a:hover, #photos > article > a:focus{
+			text-shadow:1px 1px 0px #292929, 2px 2px 0px #292929;
+		}
+		#author_box{
+			margin-bottom: 1.5em;
+			padding:10px;
+			background: #e6e2af;
+			border: 1px solid #a7a37e;
+			}
+			#posts > article > figure, #posts article > header{
+				width:228px;
+				float: left;
+			}
+			#posts > article > figure{
+				margin-right: 12px;
+				}
+			#posts > article > header h2{
+				margin-bottom: 0;
+			}
+			#photos > article > a img{
+				display: block;
+			}
+			#photos > article > a > div{
+				position: absolute;
+				top:0;
+				left:0;
+				width:206px;
+				padding:0 10px;
+				text-align: center;
+			}
+			#photos > article > a > div h3{
+				margin-bottom: 0;
+				color:#fff;
+			}
+			#posts > article > header{
+				margin-left: 12px;
+				}
+				#posts > article > header ul{
+					list-style-type: none;
+					}
+					#posts > article > header ul li{
+						background: url(images/borderh.png) bottom left repeat-x;
+						padding: 5px 0;
+					}
+			#posts > article > p{
+				clear:both;
+			}
+			#posts > article > footer{
+				border-top: 1px solid #292929;
+				border-bottom: 1px solid #292929;
+				height:2px;
+				text-align: center;
+				margin:20px 0 0 0;
+				letter-spacing: 1px;
+				}
+				#posts > article > footer > div{
+					margin-top: -.95em;
+					text-align: center
+					}
+					#posts > article > footer a{
+						padding:0 5px;
+						font-weight: bold;
+					}
+					#posts > article > footer a{
+						background:#fff;
+						font-size: 1.2em;
+					}		
+#sidebar ul{
+	list-style-type: none;
+	margin:0;
+	padding: 0;
+	}
+	#sidebar div.widget{
+		margin:1.5em 0;
+		padding:10px;
+		background: #97bdd7 url(images/bluebg.png);
+		border: 1px solid #789ab2;
+	}
+	#sidebar h2{
+		font-size: 1.5em; line-height: 1; margin-bottom: 1em;
+	}
+	#sidebar div.widget > ul > li{
+		padding:5px 0;
+		background: url(images/borderh.png) bottom left repeat-x;
+	}
+	#sidebar div.widget > ul > li:last-child{
+		background: none;
+	}
+
+footer#worlds_end{
+	background: #292929;
+	width: 100%;
+	color:#fff;
+	padding-top:1.5em;
+	padding-bottom: 1.5em;
+	margin-top: 1.5em;
+}
+
+/*FEATURED POSTS*/
+ul#featured_posts{
+	margin:0;
+	}
+	ul#featured_posts li{
+		margin-bottom: 1.5em;
+		}
+		ul#featured_posts li a{
+			position: relative;
+			display: block;
+			-webkit-transition: all .3s ease-in-out;
+		    -moz-transition: all .3s ease-in-out;
+		    -o-transition: all .3s ease-in-out;
+			}
+			ul#featured_posts li a img{
+				display: block;
+			}
+			ul#featured_posts li a div{
+				width:292px;
+				padding:0 10px;
+				position: absolute;
+				top:0px;
+				left:0px;
+				text-align: center;
+			}
+			ul#featured_posts li a:hover, ul#featured_posts li a:focus{
+				text-shadow:1px 1px 0px #292929, 2px 2px 0px #292929, 3px 3px 0px #292929, 4px 4px 0px #292929;
+			}
+			.cssanimations ul#featured_posts li a:hover, .cssanimations ul#featured_posts li a:focus{
+				-webkit-transform: scale(1.05);
+				-moz-transform: scale(1.05);
+				-0-transform: scale(1.05);	
+			}
+			ul#featured_posts li a div h2{
+				font-family: 'LeagueGothicRegular';
+				text-transform: uppercase;
+				margin-bottom: 0;
+				color:#fff;
+				font-size: 2.5em;
+				/*text-shadow:1px 1px 1px #292929, 2px 2px 1px #292929, 3px 3px 1px #292929, 4px 4px 1px #292929;*/
+			}
+			ul#featured_posts li a div p{
+				text-transform: uppercase;
+				color:#fff;
+				text-shadow:1px 1px 1px #292929;
+				margin-bottom: 0px;
+				}
+				ul#featured_posts li a div p em{
+					text-transform: lowercase;
+				}
+
+/*Single Post*/
+#single_post{
+	background: url(images/borderh.png) bottom left repeat-x;
+}
+.excerpt{
+	font-size: 1.5em;
+}
+#author_avatar{
+	width:96px;
+	margin-right: 12px;
+	float: left;
+}
+#author_description{
+	width:434px;
+	float: left;
+}
+.post_meta ul{
+	list-style-type: none;
+}
+.post_meta li{
+	padding:5px 0;
+	background: url(images/borderh.png) bottom left repeat-x;
+}
+
+/*Category, Archive, Tag, Author and Search*/
+.post_list{
+	margin-bottom: 1.5em;
+	padding-bottom: 1.5em;
+	background: url(images/borderh.png) bottom left repeat-x;
+}
+.post_list footer{
+	border-top: 1px solid #292929;
+	border-bottom: 1px solid #292929;
+	height:2px;
+	text-align: center;
+	margin:20px 0 20px 0;
+	}
+.post_list footer > div{
+	margin-top: -.9em;
+	}
+	.post_list footer a{
+		padding:0 5px;
+		font-weight: bold;
+	}
+	.post_list footer a{
+		background:#fff;
+		font-size: 1.2em;
+	}
+.navigation{
+	font-size: 2em;
+	font-family: 'LeagueGothicRegular', "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.navigation .nav_next{
+	float: right;
+}
+.navigation .nav_prev{
+	float: left;
+}
+/*Contact Page*/
+#contact_page ul{
+	list-style-type: none;
+}
+#contact_page input[type="text"], #contact_page textarea{
+	margin:0;
+	padding:5px;
+	border:1px solid #ddd;
+	font-size: 1.2em;
+	font-family: 'PT Sans',"Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+#contact_page textarea{
+	height:150px;
+}
+#contact_page input[type="submit"]{
+	font-family: 'LeagueGothicRegular', "Helvetica Neue", Arial, Helvetica, sans-serif;
+	border:0px;
+	font-size: 2em;
+	text-transform: uppercase;
+	padding:5px 20px;
+	background: #b96411;
+	color:#fff;
+}
+#contact_page input[type="submit"]:hover, #contact_page input[type="submit"]:focus{
+	background: #292929;
+	cursor: pointer;
+}
+
+/*that bloody comments template*/
+.commentlist{
+	list-style-type: none;
+	padding:0;
+	margin:0;
+	margin-bottom: 1.5em;
+	}
+	.commentlist li{
+		padding:1.5em 0;
+	}
+	.commentlist figure img{
+		float: right;
+	}
+	.commentlist li article{
+		background: url(images/borderh.png) bottom left repeat-x;
+		}
+		.comment_author{
+			font-size: 1.5em; /* 24px */ 
+			line-height: 1em; /* 24px */ 
+			margin-bottom: 1em; 
+			margin-top: 0em;
+			font-style: normal;
+		}
+#commentform label{
+	float:left;
+	width:90px;
+	margin-right: 12px;
+}
+.comment_disclaimer, .form-submit{
+	padding:0;
+}
+#respond{
+	background: #97bdd7 url(images/bluebg.png);
+	border: 1px solid #789ab2;
+	padding:10px;
+	margin-top: 1.5em;
+}
+#respond p{
+	margin-bottom: 9px;
+}
+#respond p + p{
+	text-indent: 0px;
+}
+#respond input[type="submit"]{
+	padding:5px 10px;
+	font-size: 1.2em; /* 24px */ 
+	margin:0;
+	margin:10px 0 10px 102px;
+	border:0;
+	background: #30546d;
+	color:#fff;
+}
+#respond input[type="submit"]:hover, #respond input[type="submit"]:focus{
+	cursor: pointer;
+	background: #789ab2;
+}
+#respond input[type="text"], #respond input[type="email"], #respond input[type="url"], #respond textarea{
+	margin:0;
+	padding:5px;
+	font-size: 1em;
+	border:1px solid #789ab2;
+}
+#respond textarea{
+	width:400px;
+}
+.form_fields{
+	}
+	.form_fields label{
+		clear:both;
+		padding-top: 5px;
+	}
+	.form_fields input[type="text"], .form_fields input[type="email"], .form_fields input[type="url"]{
+		width: 260px;
+	}
+
+
+/*
+    ColorBox Core Style
+    The following rules are the styles that are consistant between themes.
+    Avoid changing this area to maintain compatability with future versions of ColorBox.
+*/
+#colorbox, #cboxOverlay, #cboxWrapper{position:absolute; top:0; left:0; z-index:9999; overflow:hidden;}
+#cboxOverlay{position:fixed; width:100%; height:100%;}
+#cboxMiddleLeft, #cboxBottomLeft{clear:left;}
+#cboxContent{position:relative;}
+#cboxLoadedContent{overflow:auto;}
+#cboxLoadedContent iframe{display:block; width:100%; height:100%; border:0;}
+#cboxTitle{margin:0;}
+#cboxLoadingOverlay, #cboxLoadingGraphic{position:absolute; top:0; left:0; width:100%;}
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow{cursor:pointer;}
+
+/* 
+    ColorBox example user style
+    The following rules are ordered and tabbed in a way that represents the
+    order/nesting of the generated HTML, so that the structure easier to understand.
+*/
+#cboxOverlay{background:#000;}
+
+#colorbox{}
+    #cboxContent{margin-top:20px;}
+        #cboxLoadedContent{background:#000; padding:5px;}
+        #cboxTitle{position:absolute; top:-20px; left:0; color:#ccc;}
+        #cboxCurrent{position:absolute; top:-20px; right:0px; color:#ccc;}
+        #cboxSlideshow{position:absolute; top:-20px; right:90px; color:#fff;}
+        #cboxPrevious{position:absolute; top:50%; left:5px; margin-top:-32px; background:url(images/controls.png) no-repeat top left; width:28px; height:65px; text-indent:-9999px;}
+        #cboxPrevious.hover{background-position:bottom left;}
+        #cboxNext{position:absolute; top:50%; right:5px; margin-top:-32px; background:url(images/controls.png) no-repeat top right; width:28px; height:65px; text-indent:-9999px;}
+        #cboxNext.hover{background-position:bottom right;}
+        #cboxLoadingOverlay{background:#000;}
+        #cboxLoadingGraphic{background:url(images/loading.gif) no-repeat center center;}
+        #cboxClose{position:absolute; top:5px; right:5px; display:block; background:url(images/controls.png) no-repeat top center; width:38px; height:19px; text-indent:-9999px;}
+        #cboxClose.hover{background-position:bottom center;}
